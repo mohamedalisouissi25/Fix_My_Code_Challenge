@@ -40,7 +40,7 @@ class User():
         if pwd is None or type(pwd) is not str:
             self.__password = None
         else:
-            self._password = hashlib.md5(pwd.encode()).hexdigest().lower()
+            self.__password = hashlib.md5(pwd.encode()).hexdigest().lower()
 
     def is_valid_password(self, pwd):
         """
@@ -70,6 +70,7 @@ if __name__ == '__main__':
 
     u_pwd = "myPassword"
     user_1.password = u_pwd
+    
     if user_1.password == u_pwd:
         print("User.password should be hashed")
 
