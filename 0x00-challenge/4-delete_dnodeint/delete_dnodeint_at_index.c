@@ -36,6 +36,5 @@ if (*head == NULL || head == NULL)
 	if (saved_head->next != NULL)
 		saved_head->next->prev = tmp;
 	free(saved_head);
-	*head = saved_head;
 	return (1);
 }
