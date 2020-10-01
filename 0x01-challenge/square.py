@@ -8,7 +8,7 @@ class Square():
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """ doc """
+        """ class const """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -17,15 +17,16 @@ class Square():
         return self.width * self.height
 
     def permiter_of_my_square(self):
-        """ doc """
+        """ permiter of my square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ doc """
+        """ class rep """
         return "{}/{}".format(self.width, self.height)
 
+
 if __name__ == "__main__":
-    """ doc """
+    """ exct """
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
